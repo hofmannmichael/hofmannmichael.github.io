@@ -1,1 +1,159 @@
-Work in progress
+
+<!-- define JavaScript function to expand content of papers -->
+<script>
+    function expandAbstract(dots_id, more_id) {
+    var dots = document.getElementById(dots_id);
+    var moreText = document.getElementById(more_id);
+    // var btnText = document.getElementById("myBtn");
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+         // btnText.innerHTML = "Show abstract"; 
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        // btnText.innerHTML = "Hide abstract"; 
+        moreText.style.display = "inline";
+    }
+    }
+    </script>
+
+<!-- Hide expanded content before any click -->
+<style>
+    #paper_github_more {display: none;}
+    #paper_rent_more {display: none;}
+    #paper_management_more {display: none;}
+</style>
+
+<head>
+    <title>Michael Hofmann</title>
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <!-- Include plotly javascript -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+    <!-- Include other html files -->
+    <script src="jquery.js"></script> 
+    
+    <script>
+    $(function () {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+          var file = 'views/' + $(this).data('include') + '.html'
+          $(this).load(file)
+        })
+      })
+
+    </script> 
+
+</head>
+
+<body>
+
+<header>
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/cv.html">CV</a></li>
+    </ul>
+</nav>
+</header>
+
+<!-- Title -->
+<div>
+    <h1>Michael Hofmann</h1>
+    <br>
+</div>
+
+<!-- About -->
+<div class="about">
+    <div class="about_text">
+        <h2 style="margin-top:0;">About me</h2>
+        <p>
+            I'm a PhD Student of Economics the Chair of Organizational Economics, LMU Munich.
+            I'm interested in a range of topics in applied microeconomics, currently focussing on organizational economics.
+
+        </p>
+    </div>
+    <div class="about_picture">
+        <img src="pic_no_bg.png" alt="Michael Hofmann Photo" style="max-width:100%;">
+    </div>
+</div>
+
+
+
+<!-- Empirical Work -->
+<div class="full_row">
+    <h2>Work in Progress</h2>
+
+    <!-- Github Paper -->
+    <div id="paper_github" >
+        <div class="clickable" onclick="expandAbstract('paper_github_dots', 'paper_github_more')"><h3 > Gravity in Online Collaborations </h3></div>
+        <h5> &#8212; with Thomas Fackler & Nadzeya Laurentsyeva</h5>
+    
+        <div id="paper_github_dots">
+            <p>To which extent are geographic and cultural barriers relevant for modern, knowledge-intensive production processes that can be completely virtual?
+                <span class="clickable" style="color:rgb(100, 100, 100)" onclick="expandAbstract('paper_github_dots', 'paper_github_more')"> show details...</span></p>
+        </div>
+        
+        <div id="paper_github_more">
+            <p>
+                To which extent are geographic and cultural barriers relevant for modern, knowledge-intensive production processes that can be completely virtual? 
+                Using microdata from GitHub, the world's largest online platform for software projects, we estimate a gravity model at the city-level and show that distance, country borders, and language matter for virtual collaborations. 
+                Collaborations are significantly more likely to originate within the same city. Conditional on distance, the country border and language barriers remain economically important.
+                During the COVID-19 pandemic, the importance of geographic distance decreased. Further project-level analysis suggests that ex-ante distributed teams were relatively less affected by the pandemic than colocated teams. Our findings on individual productivity suggest that remote workers became more productive during the pandemic, which has important implications for the organization of hybrid teams in the post-pandemic world.
+                <span class="clickable" style="color:rgb(100, 100, 100)" onclick="expandAbstract('paper_github_dots', 'paper_github_more')"> hide details...</span></p>
+        <div data-include="paper_github_plot1"></div>
+        </div>
+    </div>
+    
+    <!-- RentPrice Paper -->
+    <div id="paper_rent" onclick="expandAbstract('paper_rent_dots', 'paper_rent_more')">
+    <h3> Charmers vs Rounders &#8211; Rent-price Discontinuities in the German Housing Market </h3>
+    <h5> &#8212; with Till Stowasser</h5>
+    <span id="paper_rent_dots">
+        <p>We study the role of left-digit bias &#8212; a tendency to focus on the leftmost digit of a number &#8212; in the rent-price-setting behavior of landlords.<span style="color:rgb(100, 100, 100)"> show more ...</span></p>
+    </span>
+    <span id="paper_rent_more">
+    <p>We study the role of left-digit bias &#8212; a tendency to focus on the leftmost digit of a number &#8212; in the rent-price-setting behavior of landlords.
+        We show that there are two types of landlords  &#8212; which we name <i>charmers</i> and <i>rounders</i> &#8212;  and that their strategic behavior differs systematically.
+        Using web data on German apartment listings we document that charmers exploit left-digit bias by increasing rent-prices at salient apartment-size measures.
+        In contrast, rounders aim to increase rent-prices for all apartments, not taking advantage of limited attention.
+        In addition, we provide evidence that landlords exploit behavioral biases to a larger extent in markets that grant them higher market power.
+        Being able to identify heterogeneity in bias-exploiting behavior allows us to further our understanding of how price discontinuities evolve, even in high-stakes settings such as the housing market.
+    </p>
+    </span>
+    </div>
+
+    <!-- Managment Paper -->
+    <div id="paper_management" onclick="expandAbstract('paper_management_dots', 'paper_management_more')">
+    <h3>Mapping the Dynamics of Management Styles &#8211; Evidence from German Survey Data</h3>
+    
+    <span id="paper_management_dots">
+        <p>We study how firms adjust the bundles of management practices they adopt over time, using repeated survey data collected in Germany from 2012 to 2018.<span style="color:rgb(100, 100, 100)"> show more ...</span></p>
+    </span>
+    <span id="paper_management_more">
+    <p> We study how firms adjust the bundles of management practices they adopt over time, using repeated survey data collected in Germany from 2012 to 2018.
+        By employing unsupervised machine learning, we leverage high-dimensional data on human resource policies to describe clusters of management practices (management styles).
+        Our results suggest that two management styles exist, one of which employs many and highly structured practices, while the other lacks these practices but retains training measures.
+        We document sizeable differences in styles across German firms, which (only) partially can be explained by firm characteristics.
+        Further, we show that management is highly persistent over time.
+        In light of previous findings that structured management increases firm performance, our finding have important policy implications since they show that firms which are managed in an unstructured way fail to catch up and will continue to underperform.
+    </p>
+    </span>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<footer>
+    <ul>
+        <li style="display:inline"><a href="mailto:hofmann.m@icloud.com">email</a></li>
+        <li style="display:inline"><a href="https://github.com/hofmannmichael">Github</a></li>
+    </ul>
+</footer>
+</body>

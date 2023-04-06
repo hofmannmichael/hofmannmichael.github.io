@@ -1,36 +1,168 @@
-
-<!-- define JavaScript function to expand content of papers -->
-<script>
-    function myFunction(dots_id, more_id) {
-    var dots = document.getElementById(dots_id);
-    var moreText = document.getElementById(more_id);
-    // var btnText = document.getElementById("myBtn");
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        // btnText.innerHTML = "Show abstract"; 
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        // btnText.innerHTML = "Hide abstract"; 
-        moreText.style.display = "inline";
-    }
-    }
-    </script>
-
 <head>
     <title>Michael Hofmann - CV</title>
     <!-- link to main stylesheet -->
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 
+<body>
+<header>
 <nav>
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/cv.html">CV</a></li>
     </ul>
 </nav>
+</header>
 
 
-<div>
-    <h1>Curriculum Vitae</h1>
+
+<h1>Curriculum Vitae</h1>
+
+<div id="cvwrapper">
+
+<div id="section">
+    <h3 style="margin-top: 0em;">Education</h3>
+    <hr>
+    <!-- PhD -->
+    <div id="container">
+        <div id="left"><b>PhD Candidate</b>, Chair of Organizational Economics, LMU, Munich
+            <ul id="cvlist">
+                <li>Research visit, University College London, United Kingdom</li>
+                <li>Applied econometric analysis using observational data in the fields of organizational economics, management, and behavioral economics</li>
+                <li>Productivity implications of shift to remote work in knowledge teams</li>
+                <li>Determinants and dynamics of structured management in German firms</li>
+                <li>Behavioral-bias exploitation in the German housing market</li>
+            </ul>
+        </div>
+        <div id="right">
+            since 2018
+            <ul id="cvlist">
+                01/2023 &ndash; 02/2023
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Master -->
+    <div id="container">
+        <div id="left"><b>Master of Science</b>, Economics, LMU, Munich
+            <ul id="cvlist">
+                <li>Alumni-award for young economists</li>
+
+            </ul>
+        </div>
+        <div id="right">
+            10/2015 &ndash; 05/2018
+        </div>
+    </div>
+
+    <!-- Bachelor -->
+    <div id="container">
+        <div id="left"><b>Bachelor of Science</b>, Economics, LMU, Munich
+            <ul id="cvlist">
+                <li>Semester abroad, University Maastricht, Netherlands</li>
+
+            </ul>
+        </div>
+        <div id="right">
+            10/2011 &ndash; 05/2015
+            <ul id="cvlist">
+                09/2013 &ndash; 12/2013
+            </ul>
+        </div>
+    </div>
 </div>
+
+
+
+<div id="section">
+    <h3 style="padding-top: .25em;">Work experience</h3>
+    <hr>
+    
+    <!-- LMU 2 -->
+    <div id="container">
+        <div id="left"><b>LMU</b>, Chair of Organizational Economics, Research assistant, Munich
+            <ul></ul>
+        </div>
+        <div id="right">
+            10/2016 &ndash; 09/2018
+        </div>
+    </div>
+
+    <!-- Munich Re -->
+    <div id="container">
+        <div id="left"><b>Munich Re</b>, Economics Department, Intern, Munich
+            <ul id="cvlist">
+                <li>Research on several topics incl. economic implications of natural disasters, future o retirements provision in Germany or open source in insurance</li>
+                <li>Processed research requests from oprations and management board</li>
+            </ul>
+        </div>
+        <div id="right">
+            04/2016 &ndash; 09/2018
+        </div>
+    </div>
+
+    <!-- LMU 1 -->
+    <div id="container">
+        <div id="left"><b>LMU</b>, Chair of Organizational Economics, Research assistant, Munich
+            <ul></ul>
+        </div>
+        <div id="right">
+            09/2015 &ndash; 03/2016
+        </div>
+    </div>
+
+    <!-- PwC -->
+    <div id="container">
+        <div id="left"><b>PwC AG</b>, Financial Due Diligence, Intern, Munich &amp; Frankfurt
+            <ul id="cvlist">
+                <li>Analyzed and presented financial information (i.e. income, balance sheet and cash-flow statements) and underlying key performance drivers</li>
+                <li>Independent market research, created data packages and company profiles</li>
+            </ul>
+        </div>
+        <div id="right">
+            03/2015 &ndash; 08/2015
+        </div>
+    </div>
+
+    <!-- Payback -->
+    <div id="container">
+        <div id="left"><b>PAYBACK GmbH</b>, Customer Insights, Intern &amp; Working student, Munich
+            <ul id="cvlist">
+                <li>Data analysis: Customer behavior on different platforms, demography simulations, performance of marketing campaigns and tools</li>
+                <li>Improved knowledge-sharing and document-management systems</li>
+            </ul>
+        </div>
+        <div id="right">
+            01/2014 &ndash; 10/2015
+        </div>
+    </div>
+</div>
+
+
+<div id="section">
+    <h3 style="padding-top: .25em;">Skills</h3>
+    <hr>
+    <div id="container">
+        <div id="full">
+            <ul id="cvlist">
+                <li><b>Language:</b> German, English</li>
+                <li><b>Technical:</b> Python, R, SQL, BigQuery, Stata, Git/GitHub</li>
+                <li><b>Various:</b>Data Science pipeline (cleaning, wrangling, analyzing, visualizing, presenting), empirical research, applied microeconomics, web-scraping, statistics, NLP, experimental designs</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<footer>
+    <ul>
+        <li style="display:inline"><a href="mailto:hofmann.m@icloud.com" target="_blank" rel="noopener noreferrer">email</a></li>
+        <li style="display:inline"><a href="https://www.linkedin.com/in/michael-hofmann-1ab233112/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li style="display:inline"><a href="https://github.com/hofmannmichael" target="_blank" rel="noopener noreferrer">Github</a></li>
+    </ul>
+</footer>
+
+</body>
+
